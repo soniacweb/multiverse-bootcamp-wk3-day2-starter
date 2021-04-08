@@ -9,6 +9,8 @@ class Restaurant extends Model {
 Restaurant.init({
     name: DataTypes.STRING,
     image: DataTypes.STRING,
+    summary: DataTypes.STRING,
+
 }, options);
 
 
@@ -31,9 +33,15 @@ Item.init({
 }, options);
 
 
-Restaurant.hasMany(Menu);
-Menu.belongsTo(Restaurant);
-Menu.hasMany(Item);
-Item.belongsTo(Menu);
+// Restaurant.hasMany(Menu);
+// Menu.belongsTo(Restaurant);
+// Menu.hasMany(Item);
+// Item.belongsTo(Menu);
+
+Restaurant.hasMany(Menu, {as: 'menus', foreignKey: 'restaurant_id'})
+Menu.belongsTo(Restaurant, {foreignKey: 'restaurant_id'})
+Menu.hasMany(Item, {as: 'items', foreignKey: 'menu_id'});
+Item.belongsTo(Menu, {foreignKey: 'menu_id'});
+
 
 module.exports = { Restaurant, Menu, Item };

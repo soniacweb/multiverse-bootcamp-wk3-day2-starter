@@ -1,0 +1,103 @@
+* {                 /* applies to all elements */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+​
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    background-color: rgb(255, 228, 225);
+    padding: 1em;
+    overflow: hidden;
+    }
+    
+h1 {
+    border-bottom: solid 1px black;
+    font-size: 2rem;
+    padding: 1rem;
+    }
+    
+article {
+    /* width: calc(100% - 2rem); */
+    height: 15em;
+    background-color: white;
+    margin: 1rem 1rem;
+​
+    }
+​
+main { 
+    font-size: 1.5em;
+    margin: 1rem 1rem 0 1rem;
+}
+footer {
+    margin: 0.3rem 1rem 1rem 1rem;
+    font-size: 1rem;
+}
+​
+header { 
+    padding: 0;
+    height: 10em;
+    width: 100%;
+    background-position: center;
+    background-image: cover;
+}
+section {
+    /* margin: 1rem; */
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: none;
+    gap: 1rem;
+    }
+​
+@media screen and (min-width: 40em) {
+    /* put css styling for mid-sized screens here */
+    h1 {
+        padding: 2rem;
+        border-bottom: solid 1px black;
+        }
+    article {
+        /* border: solid 2px black;   adds a border around the box */
+        width: calc(100% - 4rem);
+        height: 18em;
+        margin: 1rem 1rem;
+        font-size: 1.7em;
+        }
+    section {
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: none;
+        gap: 1rem;
+        }
+    footer {
+        margin: 0.3rem 1rem 1rem 1rem;
+        font-size: 1.5rem;
+        }
+    }
+      
+@media screen and (min-width: 60em) {
+/* put css styling for massive screens here */
+    h1 {
+        padding: 2rem;
+        border-bottom: solid 1px black;
+        }
+    article {
+        /* border: solid 2px black;   adds a border around the box */
+        width: calc(100% - 4rem);
+        height: 15em;
+        margin: 1rem 1rem;
+        font-size: 1.9em;
+        }
+    section {
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: none;
+        gap: 1rem;
+        }
+    footer {
+        margin: 0.3rem 1rem 1rem 1rem;
+        font-size: 1.5rem;
+        }
+}
