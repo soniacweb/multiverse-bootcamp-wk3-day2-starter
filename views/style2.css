@@ -2,14 +2,21 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* background-color: grey; */
+
     }
 ​
+p {
+    background-color: yellow;
+
+}
 body {
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
     background-color: rgb(255, 228, 225);
     padding: 1em;
-    overflow: hidden;
+    min-width: 500px;
+    margin: auto;
     }
     
 h1 {
@@ -22,17 +29,21 @@ article {
     /* width: calc(100% - 2rem); */
     height: 15em;
     background-color: white;
-    margin: 1rem 1rem;
-​
+    margin: 1rem;
+    /* width: 50%; */
     }
 ​
 main { 
     font-size: 1.5em;
     margin: 1rem 1rem 0 1rem;
+    background-color: red;
+
 }
+
 footer {
     margin: 0.3rem 1rem 1rem 1rem;
     font-size: 1rem;
+    background-color: pink;
 }
 ​
 header { 
@@ -47,7 +58,8 @@ section {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: none;
-    gap: 1rem;
+    /* gap: 1rem; */
+    /* width: 100%; */
     }
 ​
 @media screen and (min-width: 40em) {
