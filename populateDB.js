@@ -23,8 +23,8 @@ async function populateDB() {
         const restaurant = await Restaurant.create({
             name: restaurantData.name,
             image: restaurantData.image,
+            heroImg: restaurantData.heroImg,
             summary: restaurantData.summary,
-
         });
         restaurantData.menus.forEach(async (menuData) => {
             const menu = await Menu.create({

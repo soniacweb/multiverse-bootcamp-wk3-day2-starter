@@ -1,0 +1,34 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Return Home</a>
+ 
+</div>
+
+<h1 onclick="openNav()">&#9776; Edit Restaurant</h1>
+
+
+<div class="hero-image" style="background-image: url({{restaurant.heroImg}});">
+  <div class="hero-text">
+    <h1 class="hero-text">{{restaurant.name}}</h1>
+    {{!-- <p>And I'm a Photographer</p> --}}
+    {{!-- <button>Home</button> --}}
+  </div>
+</div>
+
+
+<form action="/restaurants/{{restaurant.id}}/edit" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name"><br>
+
+    <label>Image:</label><br>
+    <input type="url" name="image"><br><br>
+
+    <label>Hero Image:</label><br>
+    <input type="url" name="heroImg"><br><br>
+
+    <label>Tell us a bit about the restaurant</label><br>
+    <input type="text" name="summary"><br><br>
+
+
+    <input type="submit" value="Submit">
+</form>

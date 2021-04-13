@@ -1,13 +1,28 @@
-<h1>Restaurants</h1>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">About</a>
+  {{!-- <a href="#">Services</a> --}}
+  <a href="/new">Add restaurant</a>
+  <a href="#">Contact</a>
+</div>
+
+<h1 style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Restaurants</h1>
+
 <section>
     {{#each restaurants}}
         <article>
             <header style="background-image: url({{this.image}});"></header>
             {{!-- <img src={{this.image}} class="images" /> --}}
-            <main>{{this.name}}</main>
+            <main>{{this.name}}
+             <a href="/restaurants/{{this.id}}/delete"><i class="fas fa-trash-alt"></i></a>
+             <a href="/restaurants/{{this.id}}/edit"><i class="fas fa-user-edit"></i></a>
+
+            </main>
             <p>{{this.summary}}</p>
 
             <footer>{{this.menus.length}} menus</footer>
+            <button class="menu-button"><a href="/restaurants/{{this.id}}"><i class="fas fa-mouse"></i> read more</a></button>
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="true"></div>
         </article>
     {{/each}}
 </section>

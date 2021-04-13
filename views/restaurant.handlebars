@@ -1,0 +1,37 @@
+{{!-- nav works --}}
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Return Home</a>
+  {{!-- <a href="#">Services</a> --}}
+  {{!-- <a href="#">Clients</a>
+  <a href="#">Contact</a> --}}
+</div>
+
+<h1 style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Restaurants</h1>
+
+
+<div class="hero-image" style="background-image: url({{restaurant.heroImg}});">
+  <div class="hero-text">
+    <h1 class="hero-text">{{restaurant.name}}</h1>
+    {{!-- <p>And I'm a Photographer</p> --}}
+    {{!-- <button>Home</button> --}}
+  </div>
+</div>
+
+{{!-- <h1>{{restaurant.name}}</h1> --}}
+<section>
+    {{#each menus}}
+        <article class="menu-articles2">
+            <h2>{{this.title}}</h2>
+            <dl>
+                {{#each this.items}}
+                    <div>
+                        <dt>{{this.name}}</dt>
+                        <dd>£{{this.price}}</dd>
+                    </div>
+                {{/each}}
+            </dl>
+        </article>
+    {{/each}}
+</section>

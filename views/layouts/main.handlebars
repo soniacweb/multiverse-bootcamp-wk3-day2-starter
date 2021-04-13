@@ -1,11 +1,49 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
-        <link rel="stylesheet" href="../style.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css"/>
+        <link rel="stylesheet" href="/navbar.css"/>
 
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+            {{!-- google fonts --}}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Project</title>
     </head>
     <body>
+
+         <div>Number of page loads:
+        <span id="counter"></span>
+    </div>
+
         {{{body}}}
+
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="RtOjNU5b"></script>
+
+
+                    <script>
+                    function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                    }
+
+                    function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                    }
+                    </script>
+
+     <script>
+    var n = localStorage.getItem('on_load_counter');
+    if (n === null) {
+        n = 0;
+    }
+    n++;
+    localStorage.setItem("on_load_counter", n);
+    document.querySelector('#counter').innerText = `Visits to this page: ${localStorage.getItem('on_load_counter')}`
+</script>
     </body>
 </html>

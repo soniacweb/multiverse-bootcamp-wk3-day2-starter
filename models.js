@@ -9,6 +9,7 @@ class Restaurant extends Model {
 Restaurant.init({
     name: DataTypes.STRING,
     image: DataTypes.STRING,
+    heroImg: DataTypes.STRING,
     summary: DataTypes.STRING,
 
 }, options);

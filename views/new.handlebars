@@ -1,0 +1,62 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="/">Return Home</a>
+
+</div>
+
+<h1 onclick="openNav()">&#9776; Add Restaurant</h1>
+
+
+<div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80');">
+  <div class="hero-text">
+    <h1 class="hero-text">Add Restaurant</h1>
+ 
+  </div>
+</div>
+
+
+{{!-- <h2>Add Restaurant</h2> --}}
+
+<form action="/restaurants" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name"><br>
+
+    <label>Image:</label><br>
+    <input type="url" name="image"><br><br>
+
+    <label>Hero Image:</label><br>
+    <input type="url" name="imageUrl"><br><br>
+
+    <label>Tell us a bit about the restaurant</label><br>
+    <input type="text" name="Summary"><br><br>
+
+    <input type="submit" value="Submit">
+</form> 
+
+
+{{!-- // new form  --}}
+{{!-- <div class="get-in-touch">
+   <h1 class="title">Get in touch</h1>
+   <form class="contact-form row" action="/restaurants" method="POST">
+      <div class="form-field col-lg-12">
+         <input id="name" class="input-text js-input" type="text" name="name" required>
+         <label class="label" for="name">Name</label>
+      </div>
+      <div class="form-field col-lg-6 ">
+         <input id="email" class="input-text js-input" type="url" name="image" required>
+         <label class="label" for="email">Image</label>
+      </div>
+      <div class="form-field col-lg-6 ">
+         <input id="hero" class="input-text js-input" type="text" type="url" name="imageUrl"required>
+         <label class="label" for="hero">Hero Image:</label>
+      </div>
+    
+      <div class="form-field col-lg-12">
+         <input id="message" class="input-text js-input" type="text" name="Summary"  required>
+         <label class="label" for="message">Summary</label>
+      </div>
+      <div class="form-field col-lg-12">
+         <input class="submit-btn" type="submit" value="Submit">
+      </div>
+   </form>
+</div>  --}}
